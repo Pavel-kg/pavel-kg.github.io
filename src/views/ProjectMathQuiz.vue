@@ -1,6 +1,8 @@
 <template>
   <div id="project">
       <p><strong>Mobile project: Math Quiz (Android Studio)</strong> 
+       <a href="https://github.com/Pavel-kg/PavelMathQuiz" target="_blank"
+        class="text-primary">GitHub source code</a> 
         <ul>Main Page:
            <li>Generate random basic operations (+, -, *, /)</li>
            <li>Validate user answer and show the appropriate message (right/wrong)</li>
@@ -8,7 +10,7 @@
         </ul>  
         <ul>Result Page to show:
             <li>All answers</li>
-            <li>Sort answers (Ascending/Descending) based on right/wrong answers</li>
+            <li>Sort answers (Ascending/<br>Descending) based on right/wrong answers</li>
             <li>All user’s operations and right/wrong answers, total percentage of right and wrong answers</li>
        </ul> 
 </p>
