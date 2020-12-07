@@ -1,31 +1,40 @@
 <template>
   <nav>
-    <ul class="menu">
+    <ul class="menu" :class="isShowMenu ? 'active' : ''">
       <li class="logo"></li>
       <router-link to="/" tag="li" class="item"
-        ><a @click="close">About</a></router-link
+        ><a @click="closeLink">About</a></router-link
       >
       <li class="item has-submenu">
-        <a id="tab" tabindex="0" @click="closeMenu">Projects</a>
-        <ul id="dropdown" @click="closeMenu">
-          <li class="subitem-active">
-            <router-link to="/lawschool"><a>Law School</a></router-link>
-          </li>
-          <li class="subitem-active">
-            <router-link to="/mathquiz"><a>Math Quiz</a></router-link>
-          </li>
-          <li class="subitem-active">
-            <router-link to="/shopping"><a>Shopping</a></router-link>
+        <a id="tab" tabindex="0" @click="clickMethod">Projects</a>
+        <ul id="dropdown" v-if="isCloseMenu">
+          <li
+            class="subitem-active"
+            v-for="(link, index) in links"
+            :key="index"
+            @click="closeMenu"
+          >
+            <router-link :to="link.to"
+              ><a>{{ link.name }}</a></router-link
+            >
           </li>
         </ul>
       </li>
       <li class="item">
-        <a href="./src/assets/resume.pdf" download="CVPavelKhnykin"
+        <a
+          href="./src/assets/resume.pdf"
+          @click="closeMenu"
+          download="CVPavelKhnykin"
           >Download CV</a
         >
       </li>
       <li class="toggle">
-        <a href="#"><i class="fa fa-bars"></i></a>
+        <a href="#"
+          ><i
+            @click="onClick"
+            :class="isFontClass ? 'fa fa-close' : 'fa fa-bars'"
+          ></i
+        ></a>
       </li>
     </ul>
   </nav>
@@ -36,69 +45,56 @@ export default {
   data() {
     return {
       isCloseMenu: false,
+      isShowMenu: false,
+      isFontClass: false,
+      counter: 0,
+      count: 1,
+      links: [
+        { to: "/lawschool", name: "Law School Project" },
+        { to: "/mathquiz", name: "Math Quiz Project" },
+        { to: "/shopping", name: "Shopping Cart Project" },
+      ],
     };
   },
+
   methods: {
+    clickMethod() {
+      this.count++;
+      if (this.count % 2 === 0) {
+        this.isCloseMenu = true;
+      } else if (Math.abs(this.count % 2) === 1) {
+        this.isCloseMenu = false;
+      }
+    },
+    onClick() {
+      this.counter++;
+      if (Math.abs(this.counter % 2) === 1) {
+        this.isFontClass = true;
+        this.isShowMenu = true;
+      } else if (this.counter % 2 === 0) {
+        this.isFontClass = false;
+        this.isShowMenu = false;
+      }
+    },
+
     closeMenu() {
-      var element = document.getElementById("dropdown");
-      if (element.classList.contains("submenu-active")) {
-        element.classList.remove("submenu-active");
-        element.classList.add("submenu");
-      } else {
-        element.classList.remove("submenu");
-        element.classList.add("submenu-active");
-      }
+      this.isShowMenu = false;
+      this.isFontClass = false;
+      this.isCloseMenu = false;
+      this.counter++;
+      this.count++;
     },
-    close() {
-      var element = document.getElementById("dropdown");
-      if (element.classList.contains("submenu-active")) {
-        element.classList.remove("submenu-active");
-        element.classList.add("submenu");
+    closeLink() {
+      if (this.isCloseMenu == false) {
+        this.count = this.count;
+      } else if (this.isCloseMenu == true) {
+        this.count++;
       }
+      this.isShowMenu = false;
+      this.isFontClass = false;
+      this.isCloseMenu = false;
+      this.counter++;
     },
-    /* Toggle mobile menu */
-    toggleMenu() {
-      var toggle = document.querySelector(".toggle");
-      var menu = document.querySelector(".menu");
-      var items = document.querySelectorAll(".item");
-      if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-        toggle.querySelector("a").innerHTML = "<i class='fa fa-bars'></i>";
-      } else {
-        menu.classList.add("active");
-        toggle.querySelector("a").innerHTML = "<i class='fa fa-close'></i>";
-      }
-    },
-
-    /* Close Submenu From Anywhere */
-    closeSubmenu(e) {
-      var menu = document.querySelector(".menu");
-      let isClickInside = menu.contains(e.target);
-
-      if (!isClickInside && menu.querySelector(".submenu-active")) {
-        menu
-          .querySelector(".submenu-active")
-          .classList.remove("submenu-active");
-      }
-    },
-  },
-  mounted() {
-    var toggle = document.querySelector(".toggle");
-    var menu = document.querySelector(".menu");
-    var items = document.querySelectorAll(".item");
-    this.toggleMenu();
-    toggle.addEventListener("click", this.toggleMenu, false);
-    for (let item of items) {
-      if (item.querySelector(".submenu")) {
-        item.addEventListener("click", this.toggleItem, false);
-      }
-      item.addEventListener("keypress", this.toggleItem, false);
-    }
-    document.addEventListener("click", this.closeSubmenu, false);
-
-    var element = document.getElementById("dropdown");
-    element.classList.remove("submenu-active");
-    element.classList.add("submenu");
   },
 };
 </script>
@@ -124,7 +120,7 @@ a {
   color: #fbf8be;
   text-decoration: none;
 }
-ul li{
+ul li {
   list-style-type: none;
 }
 .menu,
@@ -175,9 +171,7 @@ ul li{
 .active .item {
   display: block;
 }
-.button.secondary {
-  border-bottom: 1px #444 solid;
-}
+
 .submenu {
   display: none;
 }
@@ -222,29 +216,13 @@ ul li{
     text-align: right;
     order: 2;
   }
-  /* Button up from tablet screen */
+  
   .menu li.button a {
     padding: 10px 15px;
     margin: 5px 0;
   }
-  .button a {
-    background: #0080ff;
-    border: 1px royalblue solid;
-  }
-  .button.secondary {
-    border: 0;
-  }
-  .button.secondary a {
-    background: transparent;
-    border: 1px #0080ff solid;
-  }
-  .button a:hover {
-    text-decoration: none;
-  }
-  .button:not(.secondary) a:hover {
-    background: royalblue;
-    border-color: darkblue;
-  }
+  
+ 
 }
 /* Desktop menu */
 @media all and (min-width: 960px) {
@@ -262,9 +240,7 @@ ul li{
     display: block;
     width: auto;
   }
-  .button {
-    order: 2;
-  }
+  
   .submenu-active .submenu {
     display: block;
     position: absolute;
