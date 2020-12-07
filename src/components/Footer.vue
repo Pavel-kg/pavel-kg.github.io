@@ -3,16 +3,26 @@
     <div class="footer-left">
       <h3>Pavel<span>Khnykin</span></h3>
       <p class="footer-links">
-        <router-link to="/"><a>About</a></router-link>
+        <router-link :to="`/?t=${Date.now()}`"><a>About</a></router-link>
         |
-        <router-link to="/lawschool"><a>Law School Project</a></router-link>
+        <router-link :to="`/lawschool?t=${Date.now()}`"
+          ><a>Law School Project</a></router-link
+        >
         |
-        <router-link to="/mathquiz"><a>Math Quiz Project</a></router-link>
+        <router-link :to="`/mathquiz?t=${Date.now()}`"
+          ><a>Math Quiz Project</a></router-link
+        >
         |
-        <router-link to="/shopping"><a>Shopping Cart Project</a></router-link>
+        <router-link :to="`/shopping?t=${Date.now()}`"
+          ><a>Shopping Cart Project</a></router-link
+        >
+        |
+        <a id="resume" href="./src/assets/resume.pdf" download="CVPavelKhnykin"
+          >Download CV</a
+        >
       </p>
 
-      <p class="footer-company-name">© 2020 All rights reserved.</p>
+      <p class="footer-copyright">© 2020 All rights reserved.</p>
     </div>
     <div class="footer-center">
       <div class="contacts">
@@ -62,8 +72,6 @@ body {
   font: 16px/1.6 Arial, sans-serif;
 }
 
-/* The footer is fixed to the bottom of the page */
-
 .footer-distributed {
   flex-shrink: 0;
   padding: 20px;
@@ -106,9 +114,8 @@ body {
 }
 
 .footer-distributed h3 span {
-   color: #fc4a1a;
+  color: #fc4a1a;
 }
-
 
 .footer-distributed .footer-links {
   color: #46bcde;
@@ -122,7 +129,7 @@ body {
   color: inherit;
 }
 
-.footer-distributed .footer-company-name {
+.footer-distributed .footer-copyright {
   color: #46bcde;
   font-size: 14px;
   font-weight: normal;
@@ -216,7 +223,9 @@ body {
 .contacts .fa:hover {
   color: #f62c72;
 }
-
+#resume:hover {
+  color: #f62c72;
+}
 @media (max-width: 880px) {
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
