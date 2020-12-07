@@ -2,6 +2,8 @@
   <div id="project">
     <p>
       <strong>Project Shopping cart (PHP Laravel framework and MySQL)</strong>
+      <a href="https://github.com/Pavel-kg/Shopping-cart" target="_blank"
+        class="text-primary">GitHub source code</a>
       <br />Using registration form a customer can sign-up, create personal
       profile and after sign-in can add items to the cart, update quantity or
       remove them from the cart, edit personal profile, search product. An admin
