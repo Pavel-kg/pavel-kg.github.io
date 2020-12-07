@@ -124,7 +124,9 @@ a {
   color: #fbf8be;
   text-decoration: none;
 }
-
+ul li{
+  list-style-type: none;
+}
 .menu,
 .submenu {
   list-style-type: none;
