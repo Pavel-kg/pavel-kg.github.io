@@ -16254,7 +16254,6 @@ if (inBrowser && window.Vue) {
 //
 //
 //
-//
 
 
 
@@ -17158,7 +17157,7 @@ var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_2__views_About_v
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_About_vue__ = __webpack_require__(12);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20a35f4a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_About_vue__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_448d3cce_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_About_vue__ = __webpack_require__(35);
 function injectStyle (ssrContext) {
   __webpack_require__(33)
 }
@@ -17173,12 +17172,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-20a35f4a"
+var __vue_scopeId__ = "data-v-448d3cce"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_About_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_20a35f4a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_About_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_448d3cce_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_About_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -17199,7 +17198,7 @@ var content = __webpack_require__(34);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("0ff87f07", content, true, {});
+var update = __webpack_require__(1)("94fd3352", content, true, {});
 
 /***/ }),
 /* 34 */
@@ -17210,7 +17209,7 @@ exports = module.exports = __webpack_require__(0)(false);
 
 
 // module
-exports.push([module.i, "#about[data-v-20a35f4a]{flex:1 0 auto;padding:20px}img[data-v-20a35f4a]{width:50%;max-width:200px;height:auto;margin-top:30px;margin-bottom:32px}p[data-v-20a35f4a]{margin:0;padding:0;font-size:1.8rem;line-height:1.5em;text-align:justify}#letter[data-v-20a35f4a]{color:#141a46}@media (min-width:1281px){#about[data-v-20a35f4a]{padding-bottom:29rem}}@media (min-width:1025px) and (max-width:1280px){#about[data-v-20a35f4a]{padding-bottom:29rem}}@media (min-width:768px) and (max-width:1024px){#about[data-v-20a35f4a]{padding-bottom:29rem}}@media (max-width:880px){#about[data-v-20a35f4a]{padding-bottom:29rem}}", ""]);
+exports.push([module.i, "#about[data-v-448d3cce]{flex:1 0 auto;padding:20px}img[data-v-448d3cce]{width:50%;max-width:200px;height:auto;margin-top:30px;margin-bottom:32px}p[data-v-448d3cce]{margin:0;padding:0;font-size:1.8rem;line-height:1.5em;text-align:justify}#letter[data-v-448d3cce]{color:#141a46}@media (min-width:1281px){#about[data-v-448d3cce]{padding-bottom:29rem}}@media (min-width:1025px) and (max-width:1280px){#about[data-v-448d3cce]{padding-bottom:29rem}}@media (min-width:768px) and (max-width:1024px){#about[data-v-448d3cce]{padding-bottom:29rem}}@media (max-width:880px){#about[data-v-448d3cce]{padding-bottom:29rem}}", ""]);
 
 // exports
 
@@ -17221,7 +17220,7 @@ exports.push([module.i, "#about[data-v-20a35f4a]{flex:1 0 auto;padding:20px}img[
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"about"}},[_c('div',{staticClass:"sections col-sm-12 col-12 col-xs-12",attrs:{"scrollable":""}},[_c('img',{staticClass:"img-fluid",attrs:{"src":__webpack_require__(36),"id":"images","alt":"Pavel Khnykin photo","title":"Pavel Khnykin"}}),_vm._v(" "),_c('p',{attrs:{"id":"letter"}},[_vm._v("\n      Hello, My name is Pavel and I am a Web Developer. I\n      successfully completed AEC in \"Internet Programming and Development\" at\n      John Abbott College. It gives me strong capability to conceptualize and\n      implement plans and manage details required to execute effective\n      operations. "),_c('br'),_vm._v("During the studies I performed projects from design to\n      coding and free implementation by using HTML5, CSS3, JavaScript, VueJS,\n      JQuery, WordPress and others. \n      I also have a Google Analytics Certification, \n      Completion ID: 71564605.\n      I invite you to go through my portfolio and projects.\n    ")])])])}]
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"about"}},[_c('div',{staticClass:"sections col-sm-12 col-12 col-xs-12",attrs:{"scrollable":""}},[_c('img',{staticClass:"img-fluid",attrs:{"src":__webpack_require__(36),"id":"images","alt":"Pavel Khnykin photo","title":"Pavel Khnykin"}}),_vm._v(" "),_c('p',{attrs:{"id":"letter"}},[_vm._v("\n      Hello, My name is Pavel and I am a Web Developer/tester. I\n      successfully completed AEC in \"Internet Programming and Development\" at\n      John Abbott College. It gives me strong capability to conceptualize and\n      implement plans and manage details required to execute effective\n      operations. "),_c('br'),_vm._v("I performed projects from coding and free implementation by using HTML5, CSS3, JavaScript, VueJS,\n      JQuery and others. \n      I also have a Google Analytics Certification, \n      Completion ID: 71564605.\n      I invite you to go through my portfolio and projects.\n    ")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
