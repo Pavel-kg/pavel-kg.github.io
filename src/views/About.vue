@@ -9,7 +9,7 @@
         title="Pavel Khnykin"
       />
       <p id="letter">
-        Hello, My name is Pavel !!! and I am a Web Developer. I
+        Hello, My name is Pavel and I am a Web Developer. I
         successfully completed AEC in "Internet Programming and Development" at
         John Abbott College. It gives me strong capability to conceptualize and
         implement plans and manage details required to execute effective
